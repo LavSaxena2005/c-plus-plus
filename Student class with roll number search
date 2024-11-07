@@ -1,0 +1,52 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+class Student {
+public:
+    std::string firstName;
+    int rollNumber;
+
+    Student(std::string name, int roll) : firstName(name), rollNumber(roll) {}
+};
+
+int main() {
+    std::vector<Student> students;
+    
+    // Creating 5 student objects and adding them to the vector
+    students.emplace_back("Alice", 101);
+    students.emplace_back("Bob", 102);
+    students.emplace_back("Charlie", 103);
+    students.emplace_back("David", 104);
+    students.emplace_back("Eve", 105);
+
+    int choice;
+    std::cout << "Enter 1 to search by Roll Number or 2 to search by Name: ";
+    std::cin >> choice;
+
+    if (choice == 1) {
+        int roll;
+        std::cout << "Enter Roll Number: ";
+        std::cin >> roll;
+        for (const auto& student : students) {
+            if (student.rollNumber == roll) {
+                std::cout << "Student Name: " << student.firstName << std::endl;
+                break;
+            }
+        }
+    } else if (choice == 2) {
+        std::string name;
+        std::cout << "Enter Student Name: ";
+        std::cin >> name;
+        for (const auto& student : students) {
+            if (student.firstName == name) {
+                std::cout << "Roll Number: " << student.rollNumber << std::endl;
+                break;
+            }
+        }
+    } else {
+        std::cout << "Invalid choice" << std::endl;
+    }
+
+    return 0;
+}
