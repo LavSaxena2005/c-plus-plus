@@ -1,0 +1,29 @@
+#include <iostream>
+#include <map>
+#include <string>
+
+int main() {
+    // Storing car models and units sold
+    std::map<std::string, int> carSales = {
+        {"ModelA", 100},
+        {"ModelB", 150},
+        {"ModelC", 200}
+    };
+
+    std::string modelName;
+    int unitCost;
+
+    std::cout << "Enter Car Model Name: ";
+    std::cin >> modelName;
+    std::cout << "Enter Unit Cost for " << modelName << ": ";
+    std::cin >> unitCost;
+
+    if (carSales.find(modelName) != carSales.end()) {
+        int totalValue = carSales[modelName] * unitCost;
+        std::cout << "Total Value Sold for " << modelName << ": " << totalValue << std::endl;
+    } else {
+        std::cout << "Car model not found in records." << std::endl;
+    }
+
+    return 0;
+}
