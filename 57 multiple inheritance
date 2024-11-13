@@ -1,0 +1,30 @@
+
+#include<iostream>
+using namespace std;
+class X
+{
+    protected:
+    int x=5;
+};
+class Y
+{
+    protected:
+    int y=10;
+};
+class point: public X, public Y
+{
+    public:
+    void print()
+    {
+        cout<<"("<<x<<","<<y<<")"<<endl;
+    }
+
+
+};
+
+
+int main()
+{
+    point obj;
+    obj.print();
+}
