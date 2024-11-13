@@ -1,0 +1,33 @@
+
+#include <iostream>
+using namespace std;
+class A
+{
+protected:
+    int a = 5;
+};
+class B :  virtual public A
+{
+};
+class C : public virtual A
+{
+};
+
+
+class D : public B, public C
+{
+public:
+    void putData()
+    {
+        // cout << C::a << endl;
+        // ambiguity resolve in hybrid inheritance;
+        cout << a << endl;
+    }
+};
+
+
+int main()
+{
+    D obj;
+    obj.putData();
+}
