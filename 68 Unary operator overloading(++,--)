@@ -1,0 +1,38 @@
+
+#include<iostream>
+using namespace std;
+class point
+{
+    int x,y;
+    public:
+    point(int x, int y)
+    {
+        this->x=x;
+        this->y=y;
+    }
+    void putData()
+    {
+        cout<<"("<<x<<","<<y<<")"<<endl;
+    }
+    void operator--()
+    {
+        // x=x++;//p1++;
+        // y=y++;// p1++;
+
+
+        x=x-1;//++p1
+        y=y-1;// ++p1
+    }
+};
+int main()
+{
+    point p1(3,4);
+    p1.putData();
+
+
+    // p1.operator++();
+    --p1;
+
+
+    p1.putData();
+}
