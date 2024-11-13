@@ -1,0 +1,50 @@
+
+
+#include<iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main()
+{
+    unordered_map<int, string> s={{6,"Ramu"}};
+    s.insert({1,"Ram"});
+    s.insert({2,"Rama"});
+    s.insert({3,"Raman"});
+    s.insert({4,"Ramanujan"});
+    s.insert({5,"Ramnandam"});
+    cout<<"Display using for each loop"<<endl;
+    for(auto x:s)
+    {
+        cout<<x.first<<"   "<<x.second<<endl;
+    }
+
+
+    // s.clear();
+    // cout<<s.count(20)<<endl;
+    // if(s.find(10)!=s.end())
+    // {
+    // cout<<(*s.find(10)).first<<"  "<<(*s.find(10)).second<<endl;
+
+
+    // }
+    // else
+    // {
+    //     cout<<"Sorry!"<<endl;
+    // }
+    // s.erase(2);
+    // s.erase(s.find(3));
+
+
+
+
+
+
+    cout<<"Display using iterators"<<endl;
+    for(auto it=s.begin();it!=s.end();it++)
+    {
+        cout<<it->first<<"  "<<it->second<<endl;
+    }
+
+
+
+
+}  
