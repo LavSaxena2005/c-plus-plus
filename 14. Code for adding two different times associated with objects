@@ -1,0 +1,42 @@
+
+#include <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+class times
+{
+    int h, m;
+
+
+public:
+    times()
+    {
+        h = 0;
+        m = 0;
+    }
+    times(int h1, int m1)
+    {
+        h = h1;
+        m = m1;
+    }
+    void putData()
+    {
+        cout << h << ":" << m << endl;
+    }
+    void add(times &t1, times &t2)
+    {
+        int minutes = t1.m + t2.m;
+        int min = minutes % 60;
+        int hour = minutes / 60;
+        cout << t1.h + t2.h + hour << ":" << min << endl;
+    }
+};
+int main()
+{
+    times t3;
+    times t1(3, 70);
+    t1.putData();
+    times t2(3, 70);
+    t2.putData();
+    t3.add(t1, t2);
+}
+
