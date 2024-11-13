@@ -1,0 +1,29 @@
+
+#include<iostream>
+using namespace std;
+class student
+{
+    string name;
+    int marks;
+    public:
+    student(string n, int m)
+    {
+        name=n;
+        marks=m;
+    }
+    void operator+(student &s)
+    {
+        string temp=((marks+s.marks)/2>=4?"Pass":"Fail");
+        cout<<name+" "+s.name+" "+temp;
+    }
+};
+int main()
+{
+    student s1("Ram ",5);
+    student s2("Sharma",0);
+    s1+s2;
+
+
+}
+
+
