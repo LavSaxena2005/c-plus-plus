@@ -1,0 +1,78 @@
+ 
+#include<iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main()
+{
+    unordered_set<int> s;
+    s.insert(10);
+    s.insert(20);
+    s.insert(30);
+    s.insert(40);
+    s.insert(50);
+    // s.insert(50);// duplicate not allowed
+
+
+    for(auto x: s)
+    {
+        cout<<x<<"  ";
+    }
+    cout<<endl;
+
+
+    //  s.erase(s.find(10));
+    //  s.erase(10);
+    s.erase(s.begin(), s.end());
+    // s.erase(s.begin(), s.begin()+2);// not allowed
+
+
+
+
+
+
+
+
+
+
+    // cout<<s.count(100)<<endl;
+    // if(s.find(100)!=s.end())
+    // {
+    //     cout<<"Yes"<<endl;
+
+
+    // }
+    // else
+    // {
+    //     cout<<"Sorry!"<<endl;
+    // }
+    // cout<<*s.find(10)<<endl;
+
+
+    // s.clear();// clear the elements of the container
+
+
+
+
+    for(auto x: s)
+    {
+        cout<<x<<"  ";
+    }
+    cout<<endl;
+
+
+//    for(auto it=s.begin();it!=s.end();it++)
+//    {
+//        cout<<*it<<"  ";
+//    }
+
+
+
+
+   
+
+
+
+
+}
+
+
