@@ -1,0 +1,38 @@
+ 
+#include<iostream>
+using namespace std;
+class X
+{
+    public:
+    void printX()
+    {
+        cout<<"Print X"<<endl;
+    }
+    void virtual print()=0;// pure virtual function
+};
+
+
+class Y: public X
+{
+    public:
+    void print()
+    {
+        cout<<"Y"<<endl;
+    }
+
+
+};
+int main()
+{
+    // X *ptr=new Y;
+    // ptr->print();// Y
+
+
+    X *ptr=new Y;
+    ptr->print();//class Y
+    ptr->printX();// class X wala
+
+
+}
+
+
