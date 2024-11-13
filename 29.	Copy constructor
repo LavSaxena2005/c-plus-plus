@@ -1,0 +1,46 @@
+
+#include<iostream>
+using namespace std;
+class complex
+{
+    int a,b;
+    public:
+    //  int a,b;
+    complex(int a1=0, int b1=0 )
+    {
+        a=a1;
+        b=b1;
+    }
+    complex(complex &p)
+    {
+        cout<<"Copy constructor called"<<endl;
+        a=p.b;
+        b=p.a;
+
+    }
+    void putData()
+    {
+        cout<<a<<"+i"<<b<<endl;
+    }
+};
+
+
+
+int main()
+{
+    complex c1(3,4);
+    c1.putData();
+
+    // complex c2=c1;
+    // c2.putData();
+
+    // complex c2(c1);
+    // c2.putData();
+
+     complex c2(c1);   //Invalid way to call copy cons
+    //  c2=c1;
+     c2.putData();
+
+
+}
+
