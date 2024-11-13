@@ -1,0 +1,53 @@
+
+#include<iostream>
+using namespace std;
+class X
+{
+    public:
+    void print()
+    {
+        cout<<"print X"<<endl;
+
+
+    }
+    void displayX()
+    {
+        cout<<"Display X"<<endl;
+    }
+};
+class Y: public X
+{
+     public:
+    void print()
+    {
+        cout<<"Print Y"<<endl;
+
+
+    }
+
+
+     void displayY()
+    {
+        cout<<" Display Y"<<endl;
+    }
+
+
+};
+
+
+int main()
+{
+    // X *ptr=new X();
+    // ptr->displayX();
+    // ptr->print();
+
+
+    // Y *ptr=new Y();
+    // ptr->displayY();
+    // ptr->print();
+
+
+    X *ptr=new Y();// if print() is virtual then display X and print Y
+    ptr->displayX();// if print() is  not virtual then display X and print X
+    ptr->print();
+}
